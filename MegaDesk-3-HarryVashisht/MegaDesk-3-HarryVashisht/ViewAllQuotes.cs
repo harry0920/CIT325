@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace MegaDesk_3_HarryVashisht
 {
-    public partial class Form1 : Form
+    public partial class ViewAllQuotes : Form
     {
-        public Form1()
+        public ViewAllQuotes()
         {
             InitializeComponent();
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            var mainMenu = (MainMenu)Tag;
+            mainMenu.Show();
+            Close();
         }
     }
 }
