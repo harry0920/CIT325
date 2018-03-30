@@ -53,6 +53,11 @@
             // inputdepth
             // 
             this.inputdepth.Location = new System.Drawing.Point(301, 93);
+            this.inputdepth.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             this.inputdepth.Name = "inputdepth";
             this.inputdepth.Size = new System.Drawing.Size(120, 20);
             this.inputdepth.TabIndex = 2;
@@ -60,15 +65,25 @@
             // inputwidth
             // 
             this.inputwidth.Location = new System.Drawing.Point(301, 38);
+            this.inputwidth.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             this.inputwidth.Name = "inputwidth";
             this.inputwidth.Size = new System.Drawing.Size(120, 20);
             this.inputwidth.TabIndex = 1;
             this.inputwidth.ValueChanged += new System.EventHandler(this.inputwidth_ValueChanged);
-            this.inputwidth.Validating += new System.ComponentModel.CancelEventHandler(this.inputwidth_Validating);
+            this.inputwidth.Validating += new System.ComponentModel.CancelEventHandler(this.validInput);
             // 
             // inputdrawers
             // 
             this.inputdrawers.Location = new System.Drawing.Point(301, 156);
+            this.inputdrawers.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
             this.inputdrawers.Name = "inputdrawers";
             this.inputdrawers.Size = new System.Drawing.Size(120, 20);
             this.inputdrawers.TabIndex = 3;

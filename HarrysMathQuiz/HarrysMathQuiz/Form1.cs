@@ -37,6 +37,7 @@ namespace HarrysMathQuiz
         public Form1()
         {
             InitializeComponent();
+            CurrentDate.Start();
         }
 
 
@@ -219,6 +220,19 @@ namespace HarrysMathQuiz
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Windows\media\Windows Logon.wav");
                 player.Play();
             }
+        }
+
+        private void CurrentDate_Tick(object sender, EventArgs e)
+        {
+            DateTime datetime = DateTime.Now.Date;
+
+            this.label5.Text = datetime.ToString("dd MMM yyyy");
+        }
+       
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,7 +15,28 @@ namespace MegaDesk_3_HarryVashisht
         public ViewAllQuotes()
         {
             InitializeComponent();
-        }
+
+           
+                DataTable table = new DataTable();
+                table.Columns.Add("Row No.");
+                table.Columns.Add("Col No.");
+                table.Columns.Add("Width");
+                table.Columns.Add("Height");
+                table.Columns.Add("Image URL");
+                table.Columns.Add("Description");
+
+                using (System.IO.StreamReader sr = new System.IO.StreamReader(@"C:\Users\Harry Vashisht\source\repos\CIT365\MegaDesk-3-HarryVashisht\MegaDesk-3-HarryVashisht\data.txt"))
+                {
+                    while (!sr.EndOfStream)
+                    {
+                        string[] parts = sr.ReadLine().Split(',');
+                        table.Rows.Add(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5]);
+                    }
+                }
+                dataGrid.DataSource = table;
+              //  dataGrid.DataBind();
+            }
+        
 
         private void closeButton_Click(object sender, EventArgs e)
         {

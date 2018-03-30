@@ -30,14 +30,21 @@ namespace MegaDesk_3_HarryVashisht
 
         }
 
-        private void inputwidth_Validating(object sender, CancelEventArgs e)
+        private void validInput(object sender, CancelEventArgs e)
         {
-            string ErrorMessage = "Invalid Width";
-
-         //   if(inputwidth < 0 || inputwidth > 100)
+            if(validateInt(inputwidth.Text))
             {
-
+                // SHOW message
             }
+        }
+
+        private bool validateInt(string value)
+        {
+            //value = Int32.Parse(value);
+
+            //if (value < 0 || value > 2000)
+            //    return false;
+            return true;
         }
 
         private void inputwidth_ValueChanged(object sender, EventArgs e)
